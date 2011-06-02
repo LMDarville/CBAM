@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"  type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"  type="text/javascript"></script>
+
+    <link type="text/css" href="<%= Url.Content("~/css/jquery-ui-1.8.1.custom.css") %>" rel="stylesheet" />	
+    <script type="text/css" src="<%= Url.Content("~/css/jquery-ui-1.8.1.custom.css") %> " ></script>
+
+	<script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-ui-1.8.1.custom.min.js") %>"></script>
+	<script type="text/javascript" src="<%= Url.Content("~/Scripts/json2.js") %> "></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.tablednd_0_5.js") %>"></script>
+
+   <%-- //validation--%>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/MicrosoftAjax.js") %>" ></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/MicrosoftMvcAjax.js") %>" ></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/MicrosoftMvcValidation.js") %>" ></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.unobtrusive-ajax.js") %>" ></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.validate.unobtrusive.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.validate.js") %>"></script>
+
+
+    <asp:ContentPlaceHolder ID="ScriptContent" runat='server'></asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                <h1>CBAM ASSISTANT</h1>
+            </div>
+            <div id="logindisplay">
+                <% Html.RenderPartial("LogOnUserControl"); %>
+            </div> 
+            <div id="menucontainer">
+               
+
+                <%--    <%: Request.Path %>--%>
+
+                 <ul id="menu">
+                
+                     <% if (Regex.IsMatch(Request.Path, @"/[0-9]*/"))
+                    { %>  <%--loose check for product # before adding this link--%>
+                            <li><%=Html.ActionLink("Project", "Index", "Scenario")%></li>
+                    <% }  %>  
+
+                    <li><%= Html.ActionLink("Home", "Index", "Project")%></li>
+                    <li><%= Html.ActionLink("About", "About", "Home")%></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

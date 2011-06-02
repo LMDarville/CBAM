@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CBAM" Class="CBAMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\CBAM.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CBAMConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Utility" Member="Utilities">
+    <Type Name="Utility">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ScenarioID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="QualityAttributeResponseTypeID" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Utility" Member="Utility1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="QualityAttributeResponseType_Utility" Member="QualityAttributeResponseType" ThisKey="QualityAttributeResponseTypeID" OtherKey="ID" Type="QualityAttributeResponseType" IsForeignKey="true" />
+      <Association Name="Scenario_Utility" Member="Scenario" ThisKey="ScenarioID" OtherKey="ID" Type="Scenario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Project" Member="Projects">
+    <Type Name="Project">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NChar(1000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastModified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Project_Scenario" Member="Scenarios" ThisKey="ID" OtherKey="ProjectID" Type="Scenario" />
+      <Association Name="Project_ArchitecturalStrategy" Member="ArchitecturalStrategies" ThisKey="ID" OtherKey="ProjectID" Type="ArchitecturalStrategy" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QualityAttributeResponseType" Member="QualityAttributeResponseTypes">
+    <Type Name="QualityAttributeResponseType">
+      <Column Name="ID" Type="System.String" DbType="Char(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="QualityAttributeResponseType_Utility" Member="Utilities" ThisKey="ID" OtherKey="QualityAttributeResponseTypeID" Type="Utility" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RatingDescription" Member="Importances">
+    <Type Name="Importance">
+      <Column Name="IDRatingDescription" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Association Name="Importance_Scenario" Member="Scenarios" ThisKey="IDRatingDescription" OtherKey="ImportanceRatingID" Type="Scenario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Scenarios" Member="Scenarios">
+    <Type Name="Scenario">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Source" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NChar(250)" CanBeNull="true" />
+      <Column Name="Stimulas" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Artifact" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Environment" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Response" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ResponseMeasure" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ImportanceRatingID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DifficultyRatingID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Votes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastModified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectID" Type="System.Int64" DbType="BigInt" CanBeNull="false" />
+      <Association Name="Scenario_Utility" Member="Utilities" ThisKey="ID" OtherKey="ScenarioID" Type="Utility" />
+      <Association Name="Scenario_ExpectedUtility" Member="ExpectedUtilities" ThisKey="ID" OtherKey="ScenarioID" Type="ExpectedUtility" />
+      <Association Name="Importance_Scenario" Member="Importance" Storage="_RatingDescription" ThisKey="ImportanceRatingID" OtherKey="IDRatingDescription" Type="Importance" IsForeignKey="true" />
+      <Association Name="Project_Scenario" Member="Project" ThisKey="ProjectID" OtherKey="ID" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Steps" Member="Steps">
+    <Type Name="Step">
+      <Column Name="Step" Member="Step1" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Complete" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TabRef" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Instructions" Type="System.String" DbType="NChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExpectedUtilities" Member="ExpectedUtilities">
+    <Type Name="ExpectedUtility">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ArchitecturalStrategyID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ScenarioID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ExpectedUtilityDescription" Type="System.String" DbType="NChar(250)" CanBeNull="true" />
+      <Column Name="ExpectedUtility" Member="ExpectedUtility1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Scenario_ExpectedUtility" Member="Scenario" ThisKey="ScenarioID" OtherKey="ID" Type="Scenario" IsForeignKey="true" />
+      <Association Name="ArchitecturalStrategy_ExpectedUtility" Member="ArchitecturalStrategy" ThisKey="ArchitecturalStrategyID" OtherKey="ID" Type="ArchitecturalStrategy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ArchitecturalStrategies" Member="ArchitecturalStrategies">
+    <Type Name="ArchitecturalStrategy">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastModified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CompletelyDefined" Member="IsComplete" Type="System.Boolean" DbType="Bit" CanBeNull="false" />
+      <Column Name="ProjectID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Cost" Type="System.Int64" DbType="bigint" CanBeNull="true" />
+      <Association Name="ArchitecturalStrategy_ExpectedUtility" Member="ExpectedUtilities" ThisKey="ID" OtherKey="ArchitecturalStrategyID" Type="ExpectedUtility" />
+      <Association Name="Project_ArchitecturalStrategy" Member="Project" ThisKey="ProjectID" OtherKey="ID" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Benefit" Member="Benefits">
+    <Type Name="Benefit" Id="ID1">
+      <Column Name="StrategyID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ScenarioID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ExpectedUtility" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProjectName" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="StrategyName" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StrategyDescription" Type="System.String" DbType="NChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="StrategyCost" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CurrentUtility" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="wt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RawBenefit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Benefit" Member="Benefit1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spGetBenefit" Method="spGetBenefit">
+    <Parameter Name="projID" Type="System.Int64" DbType="BigInt" />
+    <ElementType IdRef="ID1" />
+  </Function>
+</Database>

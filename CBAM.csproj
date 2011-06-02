@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{32FFEA97-10B3-4F9A-9BF1-815991F6EFF8}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CBAM</RootNamespace>
+    <AssemblyName>CBAM</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NPOI, Version=1.2.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.DDF, Version=1.2.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.DDF.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.HPSF, Version=1.2.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.HPSF.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.HSSF, Version=1.2.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.HSSF.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.POIFS, Version=1.2.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.POIFS.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.Util, Version=1.2.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\Assemblies\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\Assemblies\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ApplicationController.cs" />
+    <Compile Include="Controllers\ArchitecturalStrategyController.cs" />
+    <Compile Include="Controllers\CellStyle.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Controllers\UtilityRatingController.cs" />
+    <Compile Include="Controllers\StepsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ScenarioController.cs" />
+    <Compile Include="Controllers\UtilityController.cs" />
+    <Compile Include="Controllers\VotesController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ControllerHelpers.cs" />
+    <Compile Include="Helpers\NotFoundResult.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ArchitecturalStrategy.cs" />
+    <Compile Include="Models\ArchitecturalStrategyForUtil.cs" />
+    <Compile Include="Models\ArchitecturalStrategyRepository.cs" />
+    <Compile Include="Models\ArchitecturalStrategyViewModel.cs" />
+    <Compile Include="Models\CBAM.cs">
+      <DependentUpon>CBAM.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CBAM.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBAM.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\ProjectRepository.cs" />
+    <Compile Include="Models\IProjectRepository.cs" />
+    <Compile Include="Models\IArchitecturalStrategyRepository.cs" />
+    <Compile Include="Models\ScenarioForUtilRating.cs" />
+    <Compile Include="Models\StepsViewModel.cs" />
+    <Compile Include="Models\StepsRepository.cs" />
+    <Compile Include="Models\IStepsRepository.cs" />
+    <Compile Include="Models\ScenarioForVote.cs" />
+    <Compile Include="Models\RuleViolation.cs" />
+    <Compile Include="Models\ScenarioForUtil.cs" />
+    <Compile Include="Models\Utility.cs" />
+    <Compile Include="Models\UtilityRepository.cs" />
+    <Compile Include="Models\IUtilityRepository.cs" />
+    <Compile Include="Models\IScenarioRepository.cs" />
+    <Compile Include="Models\Scenario.cs" />
+    <Compile Include="Models\ScenarioViewModel.cs" />
+    <Compile Include="Models\ScenarioRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="StaticValues.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StaticValues.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\CBAM.mdf">
+    </Content>
+    <Content Include="App_Data\CBAM_log.ldf">
+      <DependentUpon>CBAM.mdf</DependentUpon>
+    </Content>
+    <Content Include="css\images\start-icon.png" />
+    <Content Include="css\jquery-ui-1.8.1.custom.css" />
+    <Content Include="css\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
+    <Content Include="css\images\ui-bg_dots-small_65_a6a6a6_2x2.png" />
+    <Content Include="css\images\ui-bg_flat_0_333333_40x100.png" />
+    <Content Include="css\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="css\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\images\ui-bg_glass_55_fbf8ee_1x400.png" />
+    <Content Include="css\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" />
+    <Content Include="css\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
+    <Content Include="css\images\ui-bg_highlight-soft_15_cc0000_1x100.png" />
+    <Content Include="css\images\ui-icons_004276_256x240.png" />
+    <Content Include="css\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.7.custom.min-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.1.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.9.custom.min.js" />
+    <Content Include="Scripts\jquery.tablednd_0_5.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Views\ArchitecturalStrategy\Create.aspx" />
+    <Content Include="Views\ArchitecturalStrategy\Edit.aspx" />
+    <Content Include="Views\ArchitecturalStrategy\EditUtilityDescriptions.aspx" />
+    <Content Include="Views\ArchitecturalStrategy\ExpectedUtilityForm.ascx" />
+    <Content Include="Views\ArchitecturalStrategy\Index.ascx" />
+    <Content Include="Views\ArchitecturalStrategy\StrategyForm.ascx" />
+    <Content Include="Views\Project\Create.aspx" />
+    <Content Include="Views\Project\Detail.aspx" />
+    <Content Include="Views\Project\Edit.aspx" />
+    <Content Include="Views\Project\Index.aspx" />
+    <Content Include="Views\Project\ProjectForm.ascx" />
+    <Content Include="Views\Report\Index.aspx" />
+    <Content Include="Views\Scenario\Copy of Index.aspx" />
+    <Content Include="Views\Scenario\Step5.ascx" />
+    <Content Include="Views\Scenario\Step4.ascx" />
+    <Content Include="Views\Scenario\Step3.ascx" />
+    <Content Include="Views\Scenario\Step2.ascx" />
+    <Content Include="Views\Scenario\ScenarioList.ascx" />
+    <Content Include="Views\Scenario\Index.aspx" />
+    <Content Include="Views\Scenario\zzIndex.aspx" />
+    <Content Include="Views\Scenario\zzUtilityRatingColumn.ascx" />
+    <Content Include="Views\Scenario\TopSixthList.ascx" />
+    <Content Include="Views\Shared\Copy of Step.ascx" />
+    <Content Include="Views\Shared\StepAccordion.ascx" />
+    <Content Include="Views\Shared\Step.ascx" />
+    <Content Include="Views\UtilityRating\EditorTemplates\ScenarioItem.ascx" />
+    <Content Include="Views\UtilityRating\EditorTemplates\UtilityRow.ascx" />
+    <Content Include="Views\UtilityRating\Edit.aspx" />
+    <Content Include="Views\UtilityRating\EditForm.ascx" />
+    <Content Include="Views\UtilityRating\NotFound.aspx" />
+    <Content Include="Views\Shared\ProgressBar.ascx" />
+    <Content Include="Views\Utility\EditorTemplates\ScenarioItem.ascx" />
+    <Content Include="Views\Utility\EditorTemplates\UtilityRow.ascx" />
+    <Content Include="Views\Utility\Edit.aspx" />
+    <Content Include="Views\Utility\EditForm.ascx" />
+    <Content Include="Views\Votes\EditVotesForm.ascx" />
+    <Content Include="Views\Votes\Edit.aspx" />
+    <Content Include="Views\Scenario\VotesList.ascx" />
+    <Content Include="Views\Scenario\TopThirdList.ascx" />
+    <Content Include="Views\Scenario\EditUtilities.aspx" />
+    <Content Include="Views\Scenario\EditorTemplates\UtilityRow.ascx" />
+    <Content Include="Views\Scenario\EditorTemplates\ScenarioItem.ascx" />
+    <Content Include="Views\Scenario\ScenarioDetailForm.ascx" />
+    <Content Include="Views\Scenario\Create.aspx" />
+    <Content Include="Views\Scenario\Edit.aspx" />
+    <Content Include="Views\Scenario\Detail.aspx" />
+    <Content Include="Views\Scenario\delete.ascx" />
+    <Content Include="Views\Scenario\NotFound.aspx" />
+    <Content Include="Views\Scenario\ScenarioForm.ascx" />
+    <Content Include="Views\Scenario\Step1.ascx" />
+    <Content Include="Views\Scenario\UtilityColumn.ascx" />
+    <Content Include="Views\Shared\DateTime.ascx" />
+    <Content Include="Views\Utility\NotFound.aspx" />
+    <Content Include="Views\Votes\VotesList.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.min-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.min-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\CBAM.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CBAM.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\CBAM.dbml.layout">
+      <DependentUpon>CBAM.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Template\Template_DataTable.xls" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StaticValues.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StaticValues.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\ArchitecturalStrategy\EditorTemplates\" />
+    <Folder Include="Views\Steps\" />
+    <Folder Include="Views\Votes\EditorTemplates\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58285</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

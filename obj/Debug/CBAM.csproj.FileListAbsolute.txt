@@ -1,0 +1,42 @@
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\CBAM\bin\CBAM.Contracts.dll
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\CBAM\bin\CBAM.Contracts.pdb
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\CBAM\bin\CBAM.dll
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\CBAM\bin\CBAM.pdb
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\CBAM\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\CBAM\obj\Debug\CBAM.dll
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\CBAM\obj\Debug\CBAM.pdb
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\bin\CBAM.Contracts.dll
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\bin\CBAM.Contracts.pdb
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\bin\CBAM.dll
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\bin\CBAM.pdb
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\obj\Debug\CBAM.StaticValues.resources
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\obj\Debug\CBAM.csproj.GenerateResource.Cache
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\obj\Debug\CBAM.dll
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM\obj\Debug\CBAM.pdb
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM - Copy\bin\CBAM.Contracts.dll
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM - Copy\bin\CBAM.Contracts.pdb
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM - Copy\bin\CBAM.dll
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM - Copy\bin\CBAM.pdb
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM - Copy\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM - Copy\obj\Debug\CBAM.StaticValues.resources
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM - Copy\obj\Debug\CBAM.csproj.GenerateResource.Cache
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM - Copy\obj\Debug\CBAM.dll
+C:\Users\Lisa\Documents\Visual Studio 2008\Projects\CBAM - Copy\obj\Debug\CBAM.pdb
+C:\Users\Lisa\Downloads\CBAM - old\bin\CBAM.Contracts.dll
+C:\Users\Lisa\Downloads\CBAM - old\bin\CBAM.Contracts.pdb
+C:\Users\Lisa\Downloads\CBAM - old\bin\CBAM.dll
+C:\Users\Lisa\Downloads\CBAM - old\bin\CBAM.pdb
+C:\Users\Lisa\Downloads\CBAM - old\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Lisa\Downloads\CBAM - old\obj\Debug\CBAM.StaticValues.resources
+C:\Users\Lisa\Downloads\CBAM - old\obj\Debug\CBAM.csproj.GenerateResource.Cache
+C:\Users\Lisa\Downloads\CBAM - old\obj\Debug\CBAM.dll
+C:\Users\Lisa\Downloads\CBAM - old\obj\Debug\CBAM.pdb
+C:\Users\Lisa\Documents\Visual Studio 2010\Projects\CBAM\bin\CBAM.dll
+C:\Users\Lisa\Documents\Visual Studio 2010\Projects\CBAM\bin\CBAM.pdb
+C:\Users\Lisa\Documents\Visual Studio 2010\Projects\CBAM\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Lisa\Documents\Visual Studio 2010\Projects\CBAM\obj\Debug\CBAM.StaticValues.resources
+C:\Users\Lisa\Documents\Visual Studio 2010\Projects\CBAM\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Lisa\Documents\Visual Studio 2010\Projects\CBAM\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Lisa\Documents\Visual Studio 2010\Projects\CBAM\obj\Debug\CBAM.dll
+C:\Users\Lisa\Documents\Visual Studio 2010\Projects\CBAM\obj\Debug\CBAM.pdb

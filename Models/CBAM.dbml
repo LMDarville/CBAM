@@ -112,6 +112,7 @@
       <Column Name="wt" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="RawBenefit" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Benefit" Member="Benefit1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROI" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.spGetBenefit" Method="spGetBenefit">

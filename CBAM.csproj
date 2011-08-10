@@ -135,6 +135,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CBAM.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\ReportRepository.cs" />
+    <Compile Include="Models\IReportRepository.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\ProjectRepository.cs" />
     <Compile Include="Models\IProjectRepository.cs" />
@@ -208,6 +210,7 @@
     <Content Include="Views\Project\Edit.aspx" />
     <Content Include="Views\Project\Index.aspx" />
     <Content Include="Views\Project\ProjectForm.ascx" />
+    <Content Include="Views\Report\ReportButton.ascx" />
     <Content Include="Views\Report\Index.aspx" />
     <Content Include="Views\Scenario\Copy of Index.aspx" />
     <Content Include="Views\Scenario\Step5.ascx" />

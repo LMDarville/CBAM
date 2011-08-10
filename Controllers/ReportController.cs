@@ -16,6 +16,7 @@ namespace CBAM.Controllers
     {
         IScenarioRepository scenarioRepository;
         IArchitecturalStrategyRepository strategyRepository;
+        IReportRepository reportRepository;
         // Dependency Injection enabled constructors
         public ReportController()
             : this(new ScenarioRepository())
@@ -25,14 +26,21 @@ namespace CBAM.Controllers
         {
             scenarioRepository = repository;
             strategyRepository = new ArchitecturalStrategyRepository();
+            reportRepository = new ReportRepository();
         }
-
 
         //Get: /1/Report/Index    
         public virtual ActionResult Index(long projID)
         {
             var proj = scenarioRepository.GetProjectByID(projID);
             return View(proj);
+        }
+
+        //Get: /1/Report/RunReport  
+        public virtual ActionResult ReportButton(long projID)
+        {
+            var proj = scenarioRepository.GetProjectByID(projID);
+            return PartialView(proj);
         }
 
         //Post: button click
@@ -101,29 +109,14 @@ namespace CBAM.Controllers
         }
   
         public void ArchitecturalStrategySummaryData(int projID, ref FileStream fs, ref HSSFWorkbook templateWorkbook)
-        {
-            CBAMDataContext db = new CBAMDataContext();
-            //Guid myguid = System.Guid.NewGuid();  //use GUID to generate temp table, delete after report runs
-            //db.spGenerateBenefitTable(projID, myguid); //create table
+        {  //Guid myguid = System.Guid.NewGuid();  //use GUID to generate temp table, delete after report runs
+           //db.spGenerateBenefitTable(projID, myguid); //create table
 
-            List<Benefit> benefits = db.spGetBenefit(projID).ToList();
+            List<Benefit> benefits = reportRepository.GetBenefitbyProjID(projID); //db.spGetBenefit(projID).ToList();
 
             //summarized data, use same structure as "benefits"
-            IEnumerable<Benefit> totalData = from b in benefits
-                            join strat in db.ArchitecturalStrategies on b.StrategyID equals strat.ID
-                            //into bs
-                            group b by new { b.StrategyID, strat.Cost, strat.Name, projName = strat.Project.Name } into s
-                            select new Benefit { 
-                               // ID = s.Key,
-                                StrategyName = s.Key.Name,
-                                ScenarioID = s.Max(b => b.StrategyID),
-                                ProjectName = s.Key.projName,
-                                StrategyCost = s.Key.Cost,
-                                Benefit1 = s.Sum(b => b.Benefit1)//,
-                               // ROI = s.Sum(b => b.Benefit1) == null ? 0 : s.Key.Cost / s.Sum(b => b.Benefit1)
-                            };
+            IEnumerable<Benefit> totalData = reportRepository.SummarizedBenefitData(benefits);
 
-            //StrategyBenefitDetail
             HSSFSheet sheet = templateWorkbook.GetSheet("StrategyBenefitDetail");
             populateStrategyBenefitDetails(templateWorkbook, sheet, benefits); //s/b used on detail page?
             sheet.ForceFormulaRecalculation = true;
@@ -163,11 +156,11 @@ namespace CBAM.Controllers
             colIndex++;
             headerRow.GetCell(colIndex).SetCellValue("ExpectedUtility");
             colIndex++;
-            headerRow.GetCell(colIndex).SetCellValue("Benefit");
+            headerRow.GetCell(colIndex).SetCellValue("Raw Benefit");
             colIndex++;
             headerRow.GetCell(colIndex).SetCellValue("wt(Votes)");
             colIndex++;
-            headerRow.GetCell(colIndex).SetCellValue("Raw Benefit");
+            headerRow.GetCell(colIndex).SetCellValue("(Normalized) Benefit");
             colIndex++;
             //headerRow.GetCell(colIndex).SetCellValue("Benefit");
             //colIndex++;
@@ -240,8 +233,6 @@ namespace CBAM.Controllers
 
         }
   
- 
-
         public static void populateStrategyBenefitSummaryData(HSSFWorkbook wb, HSSFSheet sheet, IEnumerable<Benefit> data)
         {
             //set headerRow and 1st column
@@ -301,7 +292,7 @@ namespace CBAM.Controllers
                         colIndex++;
                         dataRow.GetCell(colIndex).SetCellValue(item.Benefit1.Value);
                         colIndex++;
-                  
+                
                   
                         rowIndex++;
                     }//end if check max rows
@@ -365,7 +356,7 @@ namespace CBAM.Controllers
             underline.BottomBorderColor = HSSFColor.BLUE_GREY.index;
 
             HSSFCellStyle topline = wb.CreateCellStyle();
-            topline.BorderTop = CellBorderType.THICK;
+            topline.BorderTop = CellBorderType.THIN;
             topline.TopBorderColor = HSSFColor.BLUE_GREY.index;
 
             #endregion
@@ -474,20 +465,14 @@ namespace CBAM.Controllers
                             if (rowIndex >= maxRows - 1)
                             {throw new InvalidDataException();}
                         }//end expected utilities 
-                        
 
 
                         #region Add formats to bottom of strategy
+                        dataRow = sheet.CreateRow(rowIndex);
                         i = startCol;
-                        while (i < subcol) //create cells for strat header section
-                        {
-                            dataRow.CreateCell(i).CellStyle = underline;
-                            i++;
-                        }
-
                         while (i <= colIndex)//add formats to subsection w/utility info
                         {
-                            dataRow.GetCell(i).CellStyle = underline;
+                            dataRow.CreateCell(i).CellStyle = underline;
                             i++;
                         }
                         #endregion

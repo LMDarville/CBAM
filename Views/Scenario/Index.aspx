@@ -57,15 +57,32 @@
                                  
 <table width="100%"> <%--PRROGRESS BAR--%>
     <tr>
-        <td style="border-left:none; border-right:none;"><% Html.RenderAction("ProgressBar", new { projectID = Model.projectID }); %></td>
-        <td style="border-left:none; border-right:none;">
-            <div id="next"> <%=Html.HiddenFor(x => x.nextStepToComplete.Step1)%> </div>         
-            <span class="ui-state-error"> Next Step: <%=Html.Encode(Model.nextStepToComplete.Step1)%>           
-            <a style="color: blue" href="Scenario#<%=Html.Encode(Model.nextStepToComplete.TabRef)%>" class="text-link">
-                    <%=Html.Encode(Model.nextStepToComplete.Description)%> </a></span>
-        </td>
-        <td class="titlelabel" style="border-left:none;" > <%=Html.Encode(Model.ProjectName)%></td>
+            
+           <td style="border-left:none; border-right:none;"><% Html.RenderAction("ProgressBar", new { projectID = Model.projectID }); %></td>
+           <td style="border-left:none; border-right:none;">
+             
+        <% if (Model.nextStepToComplete.Step1 == 99)  
+        { %>             <%-- All Steps Complete --%>
+                       
+          
+                    <div id="next1"> <%=Html.HiddenFor(x => x.nextStepToComplete.Step1)%> </div>         
+                    <span class="ui-state-highlight"> All Steps Complete</span>
 
+                      <% Html.RenderAction("ReportButton", "Report", new { projID = Model.projectID}); %>
+     
+     
+     
+        <% } else { %>    <%-- Display next step --%>
+                    
+                    <div id="next"> <%=Html.HiddenFor(x => x.nextStepToComplete.Step1)%> </div>         
+                    <span class="ui-state-error"> Next Step: <%=Html.Encode(Model.nextStepToComplete.Step1)%>
+                     <a style="color: blue" href="Scenario#<%=Html.Encode(Model.nextStepToComplete.TabRef)%>" class="text-link">
+                    <%=Html.Encode(Model.nextStepToComplete.Description)%> </a></span>
+                    
+        <%} %>
+                
+                </td>
+        <td class="titlelabel" style="border-left:none;" > <%=Html.Encode(Model.ProjectName)%></td>
     </tr>   
 </table>
 

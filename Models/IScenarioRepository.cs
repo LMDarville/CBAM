@@ -8,8 +8,6 @@ namespace CBAM.Models
 
     public interface IScenarioRepository
     {
-
-        //IQueryable<Scenario> GetAll();
         IQueryable<Scenario> GetByProjectID(long projectID);
         Scenario GetByID(int id);
         Project GetProjectByID(long id);

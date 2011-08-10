@@ -72,13 +72,14 @@ namespace CBAM.Controllers
         // GET: /Scenarios#tab-4
         public virtual ActionResult Step4(long projID)
         {
-            var vmodel = ScenarioViewModel.CreateIndex(scenarioRepository, projID);
+            var vmodel = 
+                ScenarioViewModel.CreateIndex(scenarioRepository, projID);
             return View(vmodel);
         }
         public virtual ActionResult TopSixthList(long projID)
         {
-            var vmodel = ScenarioViewModel.CreateTopSixth(scenarioRepository, projID);
-
+            var vmodel = 
+                ScenarioViewModel.CreateTopSixth(scenarioRepository, projID);
             return PartialView(vmodel.TopSixthScenarios);
         }
 

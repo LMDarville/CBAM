@@ -2229,6 +2229,8 @@ namespace CBAM.Models
 		
 		private System.Nullable<int> _Benefit1;
 		
+		private System.Nullable<decimal> _ROI;
+		
 		public Benefit()
 		{
 		}
@@ -2421,6 +2423,22 @@ namespace CBAM.Models
 				if ((this._Benefit1 != value))
 				{
 					this._Benefit1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ROI", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> ROI
+		{
+			get
+			{
+				return this._ROI;
+			}
+			set
+			{
+				if ((this._ROI != value))
+				{
+					this._ROI = value;
 				}
 			}
 		}

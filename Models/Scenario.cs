@@ -19,8 +19,7 @@ namespace CBAM.Models
             [Required(ErrorMessage="Please enter description")]
             public string Description { get; set; }
         }
-
-    }///testing metadata for client side validation
+    }///metadata for client side validation
   
     [Bind(Include = "scenarioID, ID, projectID, Name, Description, Source, Stimulas, Source, Artifact, Environment, Response, ResponseMeasure, ImportanceRatingID, Importance, Votes")]
         public partial class Scenario

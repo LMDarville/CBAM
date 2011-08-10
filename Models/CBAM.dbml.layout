@@ -1,108 +1,108 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.875" name="CBAM">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CBAM">
   <DataContextMoniker Name="/CBAMDataContext" />
   <nestedChildShapes>
-    <classShape Id="ae626cfb-5c22-4343-8390-79eb396430b0" absoluteBounds="6, 2.125, 2.5, 1.7708968098958327">
+    <classShape Id="ae626cfb-5c22-4343-8390-79eb396430b0" isExpanded="false" absoluteBounds="5.375, 1.375, 1.625, 0.45">
       <DataClassMoniker Name="/CBAMDataContext/Utility" />
       <nestedChildShapes>
-        <elementListCompartment Id="8e69f45c-756c-4628-b647-42afa09ae9c1" absoluteBounds="6.015, 2.585, 2.4699999999999998, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8e69f45c-756c-4628-b647-42afa09ae9c1" absoluteBounds="5.39, 1.835, 2.4699999999999998, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="b683daeb-c538-4a50-8047-b4d33e50f666" absoluteBounds="0.75, 2.75, 2, 1.9631982421874987">
+    <classShape Id="b683daeb-c538-4a50-8047-b4d33e50f666" isExpanded="false" absoluteBounds="1.75, 1.75, 1.25, 0.45">
       <DataClassMoniker Name="/CBAMDataContext/Project" />
       <nestedChildShapes>
-        <elementListCompartment Id="4a305a58-c766-4b74-b4bd-00aac5ecf9ee" absoluteBounds="0.76499999999999968, 3.2100000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="4a305a58-c766-4b74-b4bd-00aac5ecf9ee" absoluteBounds="1.7649999999999997, 2.2100000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="01a52bf6-ed43-4eff-b804-74a87555d550" absoluteBounds="5.875, 0.5, 2, 1.3862939453124996">
+    <classShape Id="01a52bf6-ed43-4eff-b804-74a87555d550" isExpanded="false" absoluteBounds="5, 0.625, 2, 0.45">
       <DataClassMoniker Name="/CBAMDataContext/QualityAttributeResponseType" />
       <nestedChildShapes>
-        <elementListCompartment Id="6233c10f-085f-4932-8f58-4b7dec1676ce" absoluteBounds="5.8900000000000006, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6233c10f-085f-4932-8f58-4b7dec1676ce" absoluteBounds="5.0150000000000006, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="4b9a3c24-5cae-49c0-a015-2582f3d8a785" absoluteBounds="0.625, 1.125, 2, 1.1939925130208335">
+    <classShape Id="4b9a3c24-5cae-49c0-a015-2582f3d8a785" isExpanded="false" absoluteBounds="3.375, 0.625, 1.5, 0.45">
       <DataClassMoniker Name="/CBAMDataContext/Importance" />
       <nestedChildShapes>
-        <elementListCompartment Id="3e835808-c930-48df-a537-d97c532e9aab" absoluteBounds="0.63999999999999968, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="3e835808-c930-48df-a537-d97c532e9aab" absoluteBounds="3.3899999999999997, 1.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="4f4aa247-96b3-4ce1-b64b-5a596d22732b" absoluteBounds="3.25, 0.5, 2, 4.0785139973958326">
+    <classShape Id="4f4aa247-96b3-4ce1-b64b-5a596d22732b" isExpanded="false" absoluteBounds="3.375, 1.5, 1.5, 0.45">
       <DataClassMoniker Name="/CBAMDataContext/Scenario" />
       <nestedChildShapes>
-        <elementListCompartment Id="332f5b38-9743-48da-8fc6-f2f9791eabde" absoluteBounds="3.265, 0.96, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="332f5b38-9743-48da-8fc6-f2f9791eabde" absoluteBounds="3.39, 1.96, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="4a578e9f-339d-4e77-81e4-8105a3b2718f" isExpanded="false" absoluteBounds="0.5, 0.5, 2, 0.45">
+    <classShape Id="4a578e9f-339d-4e77-81e4-8105a3b2718f" isExpanded="false" absoluteBounds="1.75, 0.625, 1.25, 0.45">
       <DataClassMoniker Name="/CBAMDataContext/Step" />
       <nestedChildShapes>
-        <elementListCompartment Id="972f8d28-2664-47b6-855b-8401d46bc231" absoluteBounds="0.515, 0.96000000000000085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="972f8d28-2664-47b6-855b-8401d46bc231" absoluteBounds="1.7650000000000001, 1.0850000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.9375 : 1.8862939453125); (6.9375 : 2.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(6.1875 : 1.075); (6.1875 : 1.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/CBAMDataContext/QualityAttributeResponseType/QualityAttributeResponseType_Utility" />
       <nodes>
         <classShapeMoniker Id="01a52bf6-ed43-4eff-b804-74a87555d550" />
         <classShapeMoniker Id="ae626cfb-5c22-4343-8390-79eb396430b0" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.25 : 3.01044840494792); (5.54166666666667 : 3.01044840494792 : JumpStart); (5.70833333333333 : 3.01044840494792 : JumpEnd); (6 : 3.01044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.875 : 1.6625); (5.375 : 1.6625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/CBAMDataContext/Scenario/Scenario_Utility" />
       <nodes>
         <classShapeMoniker Id="4f4aa247-96b3-4ce1-b64b-5a596d22732b" />
         <classShapeMoniker Id="ae626cfb-5c22-4343-8390-79eb396430b0" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 3.66425699869792); (3.25 : 3.66425699869792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.394775390625 : 1.75); (2.394775390625 : 1.6375); (3.25 : 1.6375); (3.25 : 1.725); (3.375 : 1.725)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Algorithm">
       <AssociationMoniker Name="/CBAMDataContext/Project/Project_Scenario" />
       <nodes>
         <classShapeMoniker Id="b683daeb-c538-4a50-8047-b4d33e50f666" />
         <classShapeMoniker Id="4f4aa247-96b3-4ce1-b64b-5a596d22732b" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.625 : 1.72199625651042); (3.25 : 1.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.125 : 1.075); (4.125 : 1.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/CBAMDataContext/Importance/Importance_Scenario" />
       <nodes>
         <classShapeMoniker Id="4b9a3c24-5cae-49c0-a015-2582f3d8a785" />
         <classShapeMoniker Id="4f4aa247-96b3-4ce1-b64b-5a596d22732b" />
       </nodes>
     </associationConnector>
-    <classShape Id="fbb76a3d-bb7e-4f13-9fcf-2f6f20bda294" absoluteBounds="5.875, 4.375, 2, 1.7708968098958331">
+    <classShape Id="fbb76a3d-bb7e-4f13-9fcf-2f6f20bda294" isExpanded="false" absoluteBounds="5.375, 2, 1.625, 0.45">
       <DataClassMoniker Name="/CBAMDataContext/ExpectedUtility" />
       <nestedChildShapes>
-        <elementListCompartment Id="c3bd2e18-43d9-42b5-8096-b596bfa5387f" absoluteBounds="5.89, 4.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="c3bd2e18-43d9-42b5-8096-b596bfa5387f" absoluteBounds="5.39, 2.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.25 : 2.53925699869792); (5.625 : 2.53925699869792); (5.625 : 4.14589680989583); (6.875 : 4.14589680989583); (6.875 : 4.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.875 : 1.91338028169014); (5.115 : 1.91338028169014); (5.115 : 2.075); (5.375 : 2.075)]" fixedFrom="Caller" fixedTo="Caller">
       <AssociationMoniker Name="/CBAMDataContext/Scenario/Scenario_ExpectedUtility" />
       <nodes>
         <classShapeMoniker Id="4f4aa247-96b3-4ce1-b64b-5a596d22732b" />
         <classShapeMoniker Id="fbb76a3d-bb7e-4f13-9fcf-2f6f20bda294" />
       </nodes>
     </associationConnector>
-    <classShape Id="e69ade28-16b3-4d04-aedd-41ceea3a1cd9" absoluteBounds="3.25, 5, 2, 2.5401025390625">
+    <classShape Id="e69ade28-16b3-4d04-aedd-41ceea3a1cd9" isExpanded="false" absoluteBounds="3.375, 2, 1.5, 0.45">
       <DataClassMoniker Name="/CBAMDataContext/ArchitecturalStrategy" />
       <nestedChildShapes>
-        <elementListCompartment Id="860efbc7-07c5-4e51-9f43-082ee4d3ee7b" absoluteBounds="3.2649999999999997, 5.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="860efbc7-07c5-4e51-9f43-082ee4d3ee7b" absoluteBounds="3.3899999999999997, 2.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.25 : 5.60420065494792); (5.875 : 5.60420065494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.875 : 2.33184931506849); (5.375 : 2.33184931506849)]" fixedFrom="Caller" fixedTo="Algorithm">
       <AssociationMoniker Name="/CBAMDataContext/ArchitecturalStrategy/ArchitecturalStrategy_ExpectedUtility" />
       <nodes>
         <classShapeMoniker Id="e69ade28-16b3-4d04-aedd-41ceea3a1cd9" />
         <classShapeMoniker Id="fbb76a3d-bb7e-4f13-9fcf-2f6f20bda294" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 4.7131982421875); (3.25 : 5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.36759868421053 : 2.2); (2.36759868421053 : 2.36458333333333); (3.25 : 2.36458333333333); (3.25 : 2.225); (3.375 : 2.225)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Algorithm">
       <AssociationMoniker Name="/CBAMDataContext/Project/Project_ArchitecturalStrategy" />
       <nodes>
         <classShapeMoniker Id="b683daeb-c538-4a50-8047-b4d33e50f666" />
         <classShapeMoniker Id="e69ade28-16b3-4d04-aedd-41ceea3a1cd9" />
       </nodes>
     </associationConnector>
-    <classShape Id="ef0ef8bd-c388-4e55-99ee-99d4cc4cf072" absoluteBounds="0.625, 5.5, 2, 3.1170068359375">
+    <classShape Id="ef0ef8bd-c388-4e55-99ee-99d4cc4cf072" isExpanded="false" absoluteBounds="3.375, 2.625, 1.5, 0.45">
       <DataClassMoniker Name="/CBAMDataContext/Benefit" />
       <nestedChildShapes>
-        <elementListCompartment Id="a4ea0346-cd33-4b58-b9d4-32f4d4794733" absoluteBounds="0.64000000000000012, 5.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="a4ea0346-cd33-4b58-b9d4-32f4d4794733" absoluteBounds="3.39, 3.085, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

@@ -34,7 +34,6 @@ namespace CBAM.Models
         public long ID { get; set; }
         public string Description { get; set; }
         public string QualityAttributeResponseTypeType { get; set; }
-
         //VALIDATION-------------------------------------
         public bool IsValid
         {
@@ -49,16 +48,13 @@ namespace CBAM.Models
 
             yield break;
         }
-
         public void OnValidate(ChangeAction action)
         {
             if (!IsValid)
                 throw new ApplicationException("Rule violations prevent saving");
         }
-
     }
-    
-
+   
     [MetadataType(typeof(utilMetaData))]
     public partial class util
     {
@@ -68,8 +64,6 @@ namespace CBAM.Models
             [Required(ErrorMessage = "Description is Required")]
             [StringLength(250, ErrorMessage = "Description must be Under 250 Characters")]
             public String Description { get; set; }
-
         }
-
     }
 }

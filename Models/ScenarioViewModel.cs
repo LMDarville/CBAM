@@ -75,9 +75,7 @@ namespace CBAM.Models
             return viewModel;
         }
 
-
-
-
+      
         public static ScenarioViewModel CreateTopThird(IScenarioRepository repository, long projectID)
         {
             var viewModel = new ScenarioViewModel();

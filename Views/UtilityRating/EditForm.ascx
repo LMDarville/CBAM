@@ -6,6 +6,7 @@
  
 <%-- <% Html.EnableClientValidation();%>  --%> 
 <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.validate.js") %>"></script>
+<script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.validate.min.js") %>"></script>
 <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.validate.unobtrusive.js") %>"></script>
 
 <script type="text/javascript">

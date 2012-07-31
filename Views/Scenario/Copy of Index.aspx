@@ -41,7 +41,9 @@
                  //debugger;
                  //location.reload(); //refresh view for changes
                  document.location = ui.tab.href;  //still points to correct tab
-                 location.reload(); //goto tab
+                 $("#tabs").tabs("select", $(ui.tab.href)); //goto tab
+
+                 //location.reload(); //goto tab --doesn't work in ff 7
                  return false;
              }).show(); //end tabs
 

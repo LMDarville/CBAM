@@ -4,6 +4,7 @@
 	CREATE
 </asp:Content>
 
+debugger
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2>CREATE</h2>
     Project:  <%=Html.Encode(Model.Scenario.Project.Name)%>

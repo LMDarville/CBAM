@@ -298,7 +298,7 @@ table
 {
   border: solid 1px #e8eef4;
   border-collapse: collapse;
-  background: #f7f8f8 url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x; color: #333333; 
+  background: #f7f8f8 url("../css/images/ui-bg_flat_75_ffffff_40x100.png") 50% 50% repeat-x; color: #333333; 
 }
 
 .startIcon
@@ -495,7 +495,7 @@ span.startbutton
 	
 	display: inline-block;
     border-bottom: 1px #5C87B2 solid;
-    background: url("../css/images/") no-repeat scroll 0 3% #f6a828; 
+    background: no-repeat scroll 0 3% #f6a828; 
     border: 1px solid #e78f08;
     padding: 2px 2px 2px;
     position: relative;

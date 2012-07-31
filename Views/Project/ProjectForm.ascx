@@ -2,6 +2,7 @@
 <%@ Import Namespace="CBAM.Helpers"%>
 
 <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.validate.js") %>"></script>
+<script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.validate.min.js") %>"></script>
 <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.validate.unobtrusive.js") %>"></script>
 
 

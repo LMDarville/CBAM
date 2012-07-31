@@ -69,7 +69,7 @@ namespace CBAM.Controllers
             MemoryStream ms = new MemoryStream();
             templateWorkbook.Write(ms);                   //write workbook infor to ms
             //ms.Flush();
-            ExportDataTableToExcel(ms, "LISAReport.xls"); //send ms and filename for export 
+            ExportDataTableToExcel(ms, "CBAMReport.xls"); //send ms and filename for export 
         }
 
         public void ScenarioData(int projID, ref FileStream fs, ref HSSFWorkbook templateWorkbook)
@@ -100,7 +100,7 @@ namespace CBAM.Controllers
 
         public void ArchitecturalStrategyDetailData(int projID, ref FileStream fs, ref HSSFWorkbook templateWorkbook)
         {
-            HSSFSheet sheet = templateWorkbook.GetSheet("Strategies by Scecnario");
+            HSSFSheet sheet = templateWorkbook.GetSheet("Architectural Strategies");
             var data = strategyRepository.GetAllbyProjID(projID).OrderBy(x => x.ID).AsEnumerable();
             populateStrategyDetailData(templateWorkbook, sheet, data);
             sheet.ForceFormulaRecalculation = true;
@@ -121,7 +121,7 @@ namespace CBAM.Controllers
             populateStrategyBenefitDetails(templateWorkbook, sheet, benefits); //s/b used on detail page?
             sheet.ForceFormulaRecalculation = true;
 
-            HSSFSheet sheet1 = templateWorkbook.GetSheet("Architectural Strategies");
+            HSSFSheet sheet1 = templateWorkbook.GetSheet("ROI");
             populateStrategyBenefitSummaryData(templateWorkbook, sheet1, totalData);
             sheet1.ForceFormulaRecalculation = true;
         }

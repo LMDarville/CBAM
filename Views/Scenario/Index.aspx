@@ -33,14 +33,16 @@
              var $tabs = $("#tabs").tabs(); // first tab selected
 
              $("#tabs").bind("tabsselect", function(event, ui) {
-                 //alert($tabs.tabs('option', 'selected')); //current index
-                 //alert(ui.index); //new index selected
-                 //debugger;
+                 // alert($tabs.tabs('option', 'selected')); //current index
+                 // alert(ui.index); //new index selected
+                 debugger;
                  //location.reload(); //refresh view for changes
                  document.location = ui.tab.href;  //still points to correct tab
-                 location.reload(); //goto tab
+                // $("#tabs").tabs("load", ui.index);
+                 location.reload(); //goto tab --doesn't work in ff 7
+                 //debugger;
                  return false;
-             }).show(); //end tabs
+             }).show(); //end tabs.bind
 
          });  //end function
 

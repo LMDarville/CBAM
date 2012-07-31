@@ -3,9 +3,7 @@
 <%@ Import Namespace="CBAM.Models"%>
 <%@ Import Namespace="CBAM.Helpers"%>
 
-<%--<script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.validate.js") %>"></script>
-<script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.validate.unobtrusive.js") %>"></script>
---%>
+
 
  <% Html.EnableClientValidation();%>
  <%=Html.ValidationSummary(true,"Please correct the errors.") %>  

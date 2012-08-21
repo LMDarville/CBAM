@@ -17,14 +17,14 @@ namespace CBAM
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                "Scenario",                                              // Route name
-                "{projID}/Scenario/{action}/{id}",                           // URL with parameters
+                "Scenario",                         // Route name
+                "{projID}/Scenario/{action}/{id}", // URL with parameters
                 new { controller = "Scenario", action = "Index", projID = "1", id = UrlParameter.Optional }  // Parameter defaults
             );
 
             routes.MapRoute(
-               "Project",                                              // Route name
-                   "Project/{action}/{id}",                           // URL with parameters
+               "Project",                    // Route name
+                   "Project/{action}/{id}",  // URL with parameters
                    new { controller = "Project", action = "Index",  id = UrlParameter.Optional }  // Parameter defaults
                );
 
@@ -41,11 +41,10 @@ namespace CBAM
                   );
             
             routes.MapRoute(
-                "NewDefault",                                              // Route name
-                    "{projID}/{controller}/{action}/{id}",                           // URL with parameters
-                    new { controller = "Scenario", action = "Index", projID ="", id = UrlParameter.Optional }  // Parameter defaults
+                "NewDefault",                            // Route name
+                "{projID}/{controller}/{action}/{id}",   // URL with parameters
+                new { controller = "Scenario", action = "Index", projID = "1", id = UrlParameter.Optional }  // Parameter defaults
                 );
-
 
             routes.MapRoute(
                 "Default", // Route name
